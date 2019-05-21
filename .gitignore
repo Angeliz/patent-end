@@ -1,0 +1,6 @@
+# Created by .ignore support plugin (hsz.mobi)
+.idea/
+app/config/.env.json
+app/config/settings_dev.py
+app/config/urls_dev.py
+db.sqlite3
