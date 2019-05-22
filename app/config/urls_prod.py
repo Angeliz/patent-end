@@ -18,8 +18,9 @@ from django.urls import path
 from rest_framework_jwt.views import obtain_jwt_token
 
 from users.urls import users_urlpatterns
-# from todo.urls import todo_urlpatterns
-# from apps.projects import projects_urlpatterns
+from projects.urls import projects_urlpatterns
+from patents.urls import patents_urlpatterns
+from orders.urls import orders_urlpatterns
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -30,4 +31,5 @@ urlpatterns = [
 
 ]
 
-urlpatterns = users_urlpatterns + todo_urlpatterns + projects_urlpatterns + urlpatterns
+urlpatterns = users_urlpatterns + patents_urlpatterns + projects_urlpatterns + orders_urlpatterns + urlpatterns
+

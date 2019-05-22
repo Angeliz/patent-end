@@ -21,8 +21,9 @@ from rest_framework import permissions
 from rest_framework_jwt.views import obtain_jwt_token
 
 from users.urls import users_urlpatterns
-# from todo.urls import todo_urlpatterns
-# from projects.urls import projects_urlpatterns
+from projects.urls import projects_urlpatterns
+from patents.urls import patents_urlpatterns
+from orders.urls import orders_urlpatterns
 
 schema_view = get_schema_view(
     openapi.Info(
@@ -58,5 +59,4 @@ urlpatterns = [
 
 ]
 
-# urlpatterns = url_docs_patterns + users_urlpatterns + todo_urlpatterns + projects_urlpatterns + urlpatterns
-urlpatterns = url_docs_patterns + users_urlpatterns + urlpatterns
+urlpatterns = url_docs_patterns + users_urlpatterns + patents_urlpatterns + projects_urlpatterns + orders_urlpatterns + urlpatterns
